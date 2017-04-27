@@ -31,18 +31,12 @@ angular.module('myApp.pantallaComprar', ['ngRoute'])
                 $scope.idBorrador = firebase.database().ref().child('borrador/').push().key;
                 firebase.database().ref('/borrador/'+$scope.idBorrador)
                     .set({
-                        "p_CompanyId":1,
-                        "p_UserId":25,
-                        "p_Operation":"C",
-                        "p_SettlementCondition":"T2",
-                        "p_Orders":[{
-                            "SequenceNumber":0,
-                            "Quantity":$scope.cantidadTotal,
-                            "SharePrice": $scope.precioTotal,
-                            "PriceType":"M",
-                            "PortfolioId":100091,
-                            "SettlementCurrency":"CLP",
-                            "ShareName":   $scope.accion.NEMO}]
+                        "Quantity":$scope.cantidadTotal,
+                        "SharePrice": $scope.precioTotal,
+                        "PriceType":"M",
+                        "PortfolioId":100091,
+                        "SettlementCurrency":"CLP",
+                        "ShareName":   $scope.accion.NEMO
 
                     });
 
