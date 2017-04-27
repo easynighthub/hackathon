@@ -6,7 +6,8 @@ angular.module('myApp', [
     'ngRoute',
     'ngMap',
     'ngMaterial',
-    'myApp.pantallaGeneral'
+    'myApp.pantallaGeneral',
+    'myApp.pantallaComprar'
 
 ]).
 config(['$locationProvider', '$routeProvider',

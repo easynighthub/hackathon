@@ -51,5 +51,12 @@ angular.module('myApp.pantallaGeneral', ['ngRoute'])
             });
 
 
+            $scope.comprar = function (accion) {
+                console.log(accion + "log click");
+                console.log("envie la accion a comprar");
+                $rootScope.accionSelecionada = accion;
+                location.href = "#!/pantallaComprar";
+            }
+
 
         }]);
