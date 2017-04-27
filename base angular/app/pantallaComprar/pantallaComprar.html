@@ -11,12 +11,14 @@
     <input ng-model="precioTotal" >
 </md-input-container>
 
-<md-input-container flex="100">
-    <label>Cantidad</label>
-    <input  ng-model="cantidadTotal">
-</md-input-container>
 
-      <p> TOTAL A PAGAR : {{((precioTotal*cantidadTotal*0.04)*0.19)+precioTotal*cantidadTotal*1.04}}</p>
+        <md-input-container class="md-icon-float md-icon-right md-block">
+            <label>Cantidad</label>
+            <input ng-model="cantidadTotal" type="number" step="1">
+        </md-input-container>
+
+
+      <p> TOTAL A PAGAR : {{((precioTotal*cantidadTotal*0.02+2000)*0.19)+precioTotal*cantidadTotal*1.02+2000}}</p>
 <br><br>
     </div>
 

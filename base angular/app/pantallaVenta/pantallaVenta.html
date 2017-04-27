@@ -1,0 +1,14 @@
+<center>
+    <md-list-item class="md-3-line mdl-cell mdl-shadow--8dp" ng-repeat="accion in todasMisAcciones | orderBy:'VARIACION'" ng-click="null">
+        <div class="">
+
+        </div>
+
+        <div class="md-list-item-text" layout="column">
+            <h3>{{ accion.Share }}</h3>
+            <h4> Cantidad {{accion.AllocationQuantity }}</h4>
+            <h4> Precio Comprado {{accion.AllocationPrice }}</h4>
+            <md-button ng-click="vender(accion)" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">VENDER</md-button>
+        </div>
+    </md-list-item>
+</center>

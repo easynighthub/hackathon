@@ -33,8 +33,8 @@ angular.module('myApp.pantallaGeneral', ['ngRoute'])
                     $scope.ultimosPrecios = ultimosPreciosRequest;
 
 
-                    $scope.todasLasAcciones.forEach(function (acciones) {
-                        $scope.ultimosPrecios.forEach(function (ultimos) {
+                    $scope.todasLasAcciones.forEach(function (acciones)  {
+                         $scope.ultimosPrecios.forEach(function (ultimos)      {
                                 if(acciones.NEMO == ultimos.NEMO){
                                     $scope.accionesCompletas.push(ultimos);
                                 }

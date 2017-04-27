@@ -1,0 +1,26 @@
+
+<div class="mdl-cell" layout="row" layout-wrap>
+
+    <div flex="100">
+        <h6> NOMBRE ACCION {{accion.Share}} </h6>
+    </div>
+
+    <md-input-container flex="100">
+        <label>Precio a Vender</label>
+        <input ng-model="precioTotal" >
+    </md-input-container>
+
+    <md-input-container flex="100">
+        <label>Cantidad</label>
+        <input  ng-model="cantidadTotal">
+    </md-input-container>
+
+</div>
+
+
+<md-button ng-click="generarVenta()" class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Generar Orden</md-button>
+
+
+
+
+

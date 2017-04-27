@@ -7,7 +7,11 @@ angular.module('myApp', [
     'ngMap',
     'ngMaterial',
     'myApp.pantallaGeneral',
-    'myApp.pantallaComprar'
+    'myApp.pantallaComprar',
+    'myApp.pantallaVenta',
+    'myApp.pantallaVenderAccion',
+    'myApp.user'
+
 
 ]).
 config(['$locationProvider', '$routeProvider',

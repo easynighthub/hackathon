@@ -1,6 +1,6 @@
 <center>
     <md-list-item class="md-3-line mdl-cell mdl-shadow--8dp" ng-repeat="accion in accionesCompletas | orderBy:'VARIACION'" ng-click="null">
-<div class="">
+<div>
    {{accion.VARIACION}} <i  ng-show="accion.VARIACION < 0 " class="material-icons">trending_down</i>
      <i  ng-show="accion.VARIACION > 0 " class="material-icons">trending_up</i>
      <i  ng-show="accion.VARIACION == 0 " class="material-icons">trending_flat</i>
@@ -9,7 +9,8 @@
     <div class="md-list-item-text" layout="column">
         <h3>{{ accion.NEMO }}</h3>
         <h4> PRECIO DE COMPRA ${{accion.PRECIO_COMPRA }}</h4>
-        <md-button ng-click="comprar(accion)" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">COMPRAR</md-button>
+        <md-button ng-click="comprar(accion)" class="mdl-button mdl-cell--4-col mdl-cell--3-col-phone
+         mdl-js-button mdl-button--raised mdl-button--accent">COMPRAR</md-button>
     </div>
 </md-list-item>
 </center>

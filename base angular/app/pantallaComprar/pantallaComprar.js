@@ -36,10 +36,13 @@ angular.module('myApp.pantallaComprar', ['ngRoute'])
                         "PriceType":"M",
                         "PortfolioId":100091,
                         "SettlementCurrency":"CLP",
-                        "ShareName":   $scope.accion.NEMO
+                        "ShareName":   $scope.accion.NEMO,
+                        "id":$scope.idBorrador
 
                     });
 
+                alert("SE INGRESO TU SOLICITUD A TU CORREDORA");
+                location.href = "#!/pantallaGeneral";
 
             }
 
