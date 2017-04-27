@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="es" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="es" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="es" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="es" ng-app="myApp" class="no-js"> <!--<![endif]-->
+
+<head>
+
+    <title ng-bind="metaservice.metaTitle()">MARIO GRUA</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:url" content="{{metaservice.metaUrl()}}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{metaservice.metaTitle()}}"/>
+    <meta property="og:description" content="{{metaservice.metaDescription()}}"/>
+    <meta property="og:image" content="{{metaservice.metaImage()}}"/>
+    <meta property="fb:app_id" content="1138664439526562"/>
+
+
+    <!-- ICONOS DE GOOGLE DESIGN -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- LIBRERIAS DE LETRAS DE GOOGLE -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Slabo+27px|Shrikhand|Open+Sans" rel="stylesheet">
+
+    <!-- MDL DESING DE GOOGLE -->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-pink.min.css" />
+
+
+    <!-- DESIGN DE ANGULAR -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+
+
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+
+    <script src="https://code.angularjs.org/1.3.15/angular.js"></script>
+    <script src="https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.js"></script>
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header mdl-layout__header--scroll demo-header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">MARIO GRUA</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a id="sign-out-button" class="mdl-navigation__link" href="">
+                    <i class="material-icons" style="vertical-align: middle;">power_settings_new</i>
+                </a>
+
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Menu</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="#!/trabajadores">
+                <i class="material-icons" style="vertical-align: middle;">person</i>
+                Personal </a>
+            <a class="mdl-navigation__link" href="#!/vehiculos">
+                <i class="material-icons" style="vertical-align: middle;">directions_car</i>
+                Vehiculos </a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+    </div>
+
+    <main class=" mdl-layout__content">
+
+        <div class="page-content">
+            <div id="content">
+
+                <div ng-view>
+
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAdyOESG1TJ05V_LPYsCXiAN9l0YoV3UL0",
+        authDomain: "mariogrua-f21e1.firebaseapp.com",
+        databaseURL: "https://mariogrua-f21e1.firebaseio.com",
+        storageBucket: "mariogrua-f21e1.appspot.com",
+        messagingSenderId: "19197343879"
+    };
+    firebase.initializeApp(config);
+</script>
+
+
+<!-- <script src="js/angular.js"></script> -->
+<script src="components/angular/angular-route.js"></script>
+<script src="components/js/jquery-3.1.1.js"></script>
+<script src="app.js"></script>
+
+
+
+<script src="pantallaGeneral/pantallaGeneral.js"></script>
+<!--
+<script src="trabajadores/trabajadores.js"></script>
+<script src="agregarTrabajador/agregarTrabajador.js"></script>
+<script src="vehiculos/vehiculos.js"></script>
+<script src="agregarVehiculo/agregarVehiculo.js"></script> -->
+
+
+
+
+
+
+<script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
+
+
+
+
+
+<!-- Angular Material Library -->    <!-- Angular Material requires Angular.js Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+
+
+
+
+
+<script type="text/javascript">
+    // This function is called from the pop-up menus to transfer to
+    // a different page. Ignore if the value returned is a null string:
+    function goPage(newURL) {
+
+        // if url is empty, skip the menu dividers and reset the menu selection to default
+        if (newURL != "") {
+
+            // if url is "-", it is this page -- reset the menu:
+            if (newURL == "-") {
+                resetMenu();
+            }
+            // else, send page to designated URL
+            else {
+                document.location.href = newURL;
+            }
+        }
+    }
+
+    // resets the menu selection upon entry to this page:
+    function resetMenu() {
+        document.gomenu.selector.selectedIndex = 2;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<html lang="es">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> MARIOGRUA.CL </title>
+
+    <meta name="description" content="">
+
+    <!-- Material Design Lite CSS -->
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+    <!-- Font Awesome CSS -->
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-pink.min.css" />
+
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+    <!--  <link rel="icon" href="http://izinait.com/wp-content/uploads/2016/09/web_hi_res_512.png" type="image/x-icon"/>
+     <link rel="shortcut icon" href="http://izinait.com/wp-content/uploads/2016/09/web_hi_res_512.png" type="image/x-icon"/> -->
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header " >
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title"> MARIOGRUA.CL</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer">     </div>
+            <!-- Navigation -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <!-- <a class="mdl-navigation__link" href="">
+                     <i class="material-icons" style="vertical-align: middle;">android</i>   Descargar</a>
+                 <!--    <a class="mdl-navigation__link" href="">Link</a>
+                     <a class="mdl-navigation__link" href="">Link</a>
+                     <a class="mdl-navigation__link" href="">Link</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <div  class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Menú</span>
+        <nav class="mdl-navigation">
+            <!--  <a class="mdl-navigation__link" href="http://www.izinait.com">
+               <i class="material-icons">web</i> Pagina Oficial</a>
+        <a class="mdl-navigation__link" href="http://www.business.izinait.com">
+               <i class="material-icons">business</i>  izinait Bussines</a>
+           <!--  <a class="mdl-navigation__link" href="">
+                 <i class="material-icons">info</i> Terminos & Condiciones</a>
+             <a class="mdl-navigation__link" href="http://www.izinait.com">
+
+
+            <a class="mdl-navigation__link" href="mailto:contacto@izinait.com">
+                <i class="material-icons">contact_mail</i> Contacto</a>
+      -->
+            <!--       <a class="mdl-navigation__link" href="https://play.google.com/store/apps/details?id=com.easynight&hl=es">
+                       <i class="material-icons" style="vertical-align: middle;">android</i>Descargar</a> -->
+        </nav>
+    </div>
+    <main class="mdl-layout__content mdl-color--blue-grey-50">
+        <br>
+
+        <div>
+            <center>
+                <div class="mdl-cell  mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+                    <br><br>
+
+                    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-phone">
+
+                        <script type="text/javascript">
+                            function mostrarBarraCargando(){
+                                document.getElementById('BarraCargando').style.display = 'block';
+                                document.getElementById('sign-in-facebook').style.display = 'none'
+
+                            }
+                        </script>
+
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input    type="email" class="mdl-textfield__input" type="text" id="correo">
+                                <label class="mdl-textfield__label" for="correo">Correo Electronico</label>
+                            </div>
+                        </form>
+
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input  type="password" class="mdl-textfield__input" type="text" id="password">
+                                <label class="mdl-textfield__label" for="password">Password</label>
+                            </div>
+                        </form>
+
+                        <button  id="signIn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">INGRESAR</button>
+
+
+                        <br><br>
+
+
+
+
+                    </div>
+
+                </div>
+            </center>
+        </div>
+
+
+    </main>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+    <script src="app/components/js/jquery-3.1.1.js"></script>
+    <script src="login.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAdyOESG1TJ05V_LPYsCXiAN9l0YoV3UL0",
+            authDomain: "mariogrua-f21e1.firebaseapp.com",
+            databaseURL: "https://mariogrua-f21e1.firebaseio.com",
+            storageBucket: "mariogrua-f21e1.appspot.com",
+            messagingSenderId: "19197343879"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+</div>
+</body>
+</html>
