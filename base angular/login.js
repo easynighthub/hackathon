@@ -8,7 +8,7 @@ ingresarAdmin.addEventListener('click', function() {
     firebase.auth().signInWithEmailAndPassword(email, password).then(
         function(s){
             console.log(s);
-            firebase.database().ref('/adminMarioGrua/' + s.uid).once('value').then(function(snapshot) {
+            firebase.database().ref('/user/' + s.uid).once('value').then(function(snapshot) {
                 if (snapshot.val() != null)
                     window.location.href = 'app';
                 else {

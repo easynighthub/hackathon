@@ -1,3 +1,15 @@
-<md-button class="md-primary md-raised" ng-click="showConfirm($event)" >
-    Confirm Dialog
-</md-button>
+<center>
+    <md-list-item class="md-3-line mdl-cell mdl-shadow--8dp" ng-repeat="accion in accionesCompletas | orderBy:'VARIACION'" ng-click="null">
+<div class="">
+   {{accion.VARIACION}} <i  ng-show="accion.VARIACION < 0 " class="material-icons">trending_down</i>
+     <i  ng-show="accion.VARIACION > 0 " class="material-icons">trending_up</i>
+     <i  ng-show="accion.VARIACION == 0 " class="material-icons">trending_flat</i>
+</div>
+
+    <div class="md-list-item-text" layout="column">
+        <h3>{{ accion.NEMO }}</h3>
+        <h4> PRECIO DE COMPRA ${{accion.PRECIO_COMPRA }}</h4>
+        <p>valor de la ultima accion vendida del dia ${{accion.ULTIMO }}</p>
+    </div>
+</md-list-item>
+</center>
