@@ -21,8 +21,8 @@ angular.module('myApp.pantallaGeneral', ['ngRoute'])
             $scope.accionesCompletas = [];
 
 
-                var indiceBolsaRequest = $firebaseArray(firebase.database().ref().child('instrumento_IndiceResult')); // los mas usados
-            var ultimosPreciosRequest = $firebaseArray(firebase.database().ref().child('INSTRUMENTResult'));
+                var indiceBolsaRequest = $firebaseArray(firebase.database().ref().child('ipsa/0')); // los mas usados
+            var ultimosPreciosRequest = $firebaseArray(firebase.database().ref().child('user/0'));
 
 
             indiceBolsaRequest.$loaded().then(function () {

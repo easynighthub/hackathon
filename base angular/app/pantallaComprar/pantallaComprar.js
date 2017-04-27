@@ -22,7 +22,33 @@ angular.module('myApp.pantallaComprar', ['ngRoute'])
 
 
             $scope.accion = $rootScope.accionSelecionada;
-            console.log($scope.accion );
+            $scope.precioTotal = $scope.accion.PRECIO_COMPRA;
+            $scope.cantidadTotal = 0 ;
+
+
+            $scope.generarOrden = function () {
+                console.log("envie la accion a comprar");
+                $scope.idBorrador = firebase.database().ref().child('borrador/').push().key;
+                firebase.database().ref('/borrador/'+$scope.idBorrador)
+                    .set({
+                        "p_CompanyId":1,
+                        "p_UserId":25,
+                        "p_Operation":"C",
+                        "p_SettlementCondition":"T2",
+                        "p_Orders":[{
+                            "SequenceNumber":0,
+                            "Quantity":$scope.cantidadTotal,
+                            "SharePrice": $scope.precioTotal,
+                            "PriceType":"M",
+                            "PortfolioId":100091,
+                            "SettlementCurrency":"CLP",
+                            "ShareName":   $scope.accion.NEMO}]
+
+                    });
+
+
+            }
+
 
 
         }]);
